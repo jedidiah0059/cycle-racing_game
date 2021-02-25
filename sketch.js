@@ -100,9 +100,9 @@ function draw() {
       gameState = END;
     }
     
-    if(distance === 100){
+    if(distance === 1000){
       gameState = WIN;
-      distance = 100;
+      distance = 1000;
       path.velocityX = 0;
     obstaclesGroup.setVelocityXEach(0);
     obstaclesGroup.setLifetimeEach(-1);  
