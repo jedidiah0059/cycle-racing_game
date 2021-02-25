@@ -100,7 +100,7 @@ function draw() {
       gameState = END;
     }
     
-    if(distance === 1000){
+    if(distance === 100){
       gameState = WIN;
       distance = 1000;
       path.velocityX = 0;
