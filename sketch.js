@@ -143,9 +143,10 @@ else if(gameState === WIN){
   wincup = createSprite(250,200,10,10);
   wincup.addImage(wincup_image);
   wincup.scale = 0.09
+  wincup.visible = true;
   mainCyclist.changeAnimation("winner",winner);
   if(keyDown("r")){
-      reset();
+      reset1();
       
     }
 
@@ -232,4 +233,12 @@ function reset(){
   opponentsGroup.destroyEach();
   distance = 0;
   mainCyclist.changeAnimation("cyclist_anim",mainRacerImg1);
+}
+function reset1(){
+  gameState = PLAY;
+  obstaclesGroup.destroyEach();
+  opponentsGroup.destroyEach();
+  distance = 0;
+  mainCyclist.changeAnimation("cyclist_anim",mainRacerImg1);
+  wincup.visible = false;
 }
